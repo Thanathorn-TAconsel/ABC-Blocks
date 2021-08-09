@@ -63,7 +63,12 @@ A = Input_Processor()
 game = abcblocks()
 game.random_map()
 game.display_board()
+count = 0
 while(not game.checkwin()):
     while(not game.move(A.Input_check())):
         pass
     game.display_board()
+    count+=1
+    print("Moved count "+ str(count))
+print("You Win")
+input()
